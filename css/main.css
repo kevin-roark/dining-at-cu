@@ -18,6 +18,10 @@ body {
     padding: 1.5em;
 }
 
+.s-box {
+    padding: 1em;
+}
+
 /*
  * PURE BUTTON STYLES
  */
@@ -55,6 +59,7 @@ a.pure-button-primary {
   padding: 0.5em;
   color: white;
   font-size: 200%;
+  letter-spacing: 0.08em;
 }
   .menu-date-input:focus {
     outline: none;
@@ -65,6 +70,8 @@ a.pure-button-primary {
   width: 25%;
   border: 1px solid #bbb;
   color: #ddd;
+  font-size: 120%;
+  padding: 0.75em 1em;
 }
   .menu-form-button:hover, .menu-form-button:focus {
     color: white;
@@ -231,12 +238,27 @@ a.pure-button-primary {
   width: 60%;
   margin-left: 20%;
   line-height: 1.2em;
+  font-size: 170%;
 }
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
     color: rgba(20, 20, 20, 1);
 }
+
+.footer {
+  background-color: rgba(225, 225, 225, 1);
+  color: #333;
+  text-align: center;
+  font-size: 100%;
+}
+  .footer a {
+    color: rgba(60, 60, 240, 0.9);
+    text-decoration: none;
+  }
+    .footer a:hover, .footer a:focus {
+      color: rgba(75, 75, 255, 1.0);
+    }
 
 /**
  * BIG STUFF STYLES

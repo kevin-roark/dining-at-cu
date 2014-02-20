@@ -10,6 +10,12 @@ $(function() {
       $el.css('filter', filter);
     }
 
+    function updateStateDate(date) {
+      var title = "Dining @ Cu Menu for " + date;
+      document.title = title;
+      window.history.pushState(date, title, "#menus/" + date);
+    }
+
     var pizzaBg = $('.splash-background-container');
 
     $(document).scroll(function() {
@@ -23,12 +29,12 @@ $(function() {
     });
 
     $('.menu-form').submit(function(ev) {
-
       var dateStr = $('.menu-date-input').val();
       var date = chrono.parseDate(dateStr);
       if (!date) {
         // handle problem
-      } else {
+      }
+      else {
         var day = ''  + date.getDate();
         if (day.length <= 1) {
           day = '0' + day;
@@ -39,7 +45,8 @@ $(function() {
         }
         var year = ('' + date.getFullYear()).substring(2);
 
-        var formattedDate = month + '/' + day + '/' + year;
+        var formattedDate = month + '-' + day + '-' + year;
+        updateStateDate(formattedDate);
       }
 
       return false;
