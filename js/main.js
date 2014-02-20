@@ -13,7 +13,8 @@ $(function() {
     function updateStateDate(date) {
       var title = "Dining @ Cu Menu for " + date;
       document.title = title;
-      window.history.pushState(date, title, "#menus/" + date);
+      //window.history.pushState(date, title, "#menus/" + date);
+      window.location.pathname = '/menu/#' + date;
     }
 
     var pizzaBg = $('.splash-background-container');
