@@ -1,0 +1,160 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.7em;
+    font-size: 13px;
+}
+
+/*
+ * PURE BUTTON STYLES
+ */
+.pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+a.pure-button-primary {
+    background: white;
+    color: #1f8dd6;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+
+/**
+ * MENU STYLES
+ */
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 2px 1px rgba(0,0,0, 0.6);
+}
+    .home-menu.pure-menu-open {
+        background: rgba(25, 25, 25, 1.0);
+    }
+    .pure-menu.pure-menu-open.pure-menu-fixed {
+        /* Fixed menus normally have a border at the bottom. */
+        border-bottom: none;
+        /* I need a higher z-index here because of the scroll-over effect. */
+        z-index: 4;
+    }
+
+    .home-menu .pure-menu-heading {
+        color: white;
+        font-weight: 400;
+        font-size: 120%;
+        letter-spacing: 2px;
+    }
+
+        .home-menu .pure-menu-selected a {
+            color: white;
+            background-color: rgba(30, 30, 30, 1.0);
+        }
+
+        .home-menu a {
+            color: white;
+        }
+        .home-menu li a:hover, .home-menu li a:focus {
+            background: none;
+            border: none;
+            color: rgba(175, 175, 175, 1.0);
+        }
+
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+
+.splash-container {
+    background: url('../images/pizza_banner.jpg');
+    background-position: 0 -250px;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: -100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* This is the main heading that appears on the blue section */
+.splash-head {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    border: 3px solid white;
+    padding: 1em 1.6em;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+/* This is the subheading that appears on the blue section */
+.splash-subhead {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    opacity: 0.95;
+    font-size: 22px;
+}
+
+/**
+ * BIG STUFF STYLES
+ */
+
+@media (min-width: 48em) {
+    body {
+        font-size: 16px;
+    }
+
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+            padding-right: 1em;
+        }
+
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+
+}
+
+/*
+ * EVEN BIGGER STYLES
+ */
+@media (min-width: 78em) {
+    /* We increase the header font size even more */
+    .splash-head {
+        font-size: 300%;
+    }
+
+}
