@@ -301,3 +301,69 @@ a.pure-button-primary {
     }
 
 }
+
+/**
+ *
+ * SUPER-SECTION: MENU RESULT STYLES
+ *
+ */
+
+.menu-box {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.menu-splash-container {
+  background-color: rgba(225, 30, 30, 1);
+    /* The following styles are required for the "scroll-over" effect */
+  height: 100%; /* should be ~ 35 - 40% after load */
+}
+  .menu-splash-container-reduced-height {
+    height: 36%;
+  }
+
+.menu-splash {
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0px; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu-splash-head {
+    color: white;
+    border: none;
+    padding: 0.7em 0.5em;
+    text-align: left;
+}
+
+.menu-content-wrapper {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  min-height: 65%;
+  z-index: 2;
+  background: white;
+  display: none;
+}
+
+.menu-gray-content-wrapper {
+  background-color: #eee;
+  color: #222;
+}
+
+.menu-content-head {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1em 1em 1em 3em;
+  padding-top: 0.5em;
+  font-size: 2em;
+}
+
+.menu-subhead {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 300;
+}

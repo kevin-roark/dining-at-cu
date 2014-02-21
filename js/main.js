@@ -10,12 +10,36 @@ $(function() {
       $el.css('filter', filter);
     }
 
-    function updateStateDate(date) {
-      var title = "Dining @ Cu Menu for " + date;
-      document.title = title;
-      //window.history.pushState(date, title, "#menus/" + date);
-      window.location.pathname = '/menu/#' + date;
+    function updatePage(date) {
+      window.location.replace(getDateLink(date));
     }
+
+    function getDateLink(date) {
+      var day = ''  + date.getDate();
+      if (day.length <= 1) {
+        day = '0' + day;
+      }
+      var month = '' + (date.getMonth() + 1);
+      if (month.length <= 1) {
+        month = '0' + month;
+      }
+      var year = ('' + date.getFullYear()).substring(2);
+
+      var formattedDate = month + '-' + day + '-' + year;
+      return '/menu/#' + formattedDate;
+    }
+
+    function isScrolledIntoView(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    $('#today-menu-link').attr('href', getDateLink(new Date()));
 
     var pizzaBg = $('.splash-background-container');
 
@@ -24,7 +48,7 @@ $(function() {
       var blurAmt = scrollTop * 0.02;
       blurElement(pizzaBg, blurAmt);
 
-      if (scrollTop > 400) {
+      if (isScrolledIntoView($('.menu-date-input'))) {
         $('.menu-date-input').focus();
       }
     });
@@ -36,18 +60,7 @@ $(function() {
         // handle problem
       }
       else {
-        var day = ''  + date.getDate();
-        if (day.length <= 1) {
-          day = '0' + day;
-        }
-        var month = '' + (date.getMonth() + 1);
-        if (month.length <= 1) {
-          month = '0' + month;
-        }
-        var year = ('' + date.getFullYear()).substring(2);
-
-        var formattedDate = month + '-' + day + '-' + year;
-        updateStateDate(formattedDate);
+        updatePage(date);
       }
 
       return false;
