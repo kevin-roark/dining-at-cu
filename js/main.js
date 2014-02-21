@@ -57,7 +57,8 @@ $(function() {
       var dateStr = $('.menu-date-input').val();
       var date = chrono.parseDate(dateStr);
       if (!date) {
-        // handle problem
+        $('.menu-date-input').val('');
+        $('.menu-date-input').attr('placeholder', "That's not a date. Try " + '"Monday."');
       }
       else {
         updatePage(date);

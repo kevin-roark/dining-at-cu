@@ -73,6 +73,19 @@ a.pure-button-primary {
     outline: none;
   }
 
+  ::-webkit-input-placeholder {
+   color: rgba(245, 40, 40, 1);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: rgba(245, 40, 40, 1);
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: rgba(245, 40, 40, 1); 
+  }
+  :-ms-input-placeholder {  
+     color: rgba(245, 40, 40, 1); 
+  }
+
 .menu-form-button {
   margin: 2em 0em;
   width: 25%;
@@ -144,7 +157,7 @@ a.pure-button-primary {
 
     display: block;
     background: url('../images/pizza_banner_crop1.png');
-    background-position: -10px -50px;
+    background-position: -10px 0px;
     overflow: hidden;
 
     -webkit-transform: translate3d(0, 0, 0);
@@ -168,10 +181,10 @@ a.pure-button-primary {
 .splash {
     /* absolute center .splash within .splash-container */
     width: 80%;
-    height: 50%;
+    height: 55%;
     margin: auto;
     position: absolute;
-    top: -100px; left: 0; bottom: 0; right: 0;
+    top: -25%; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -193,7 +206,7 @@ a.pure-button-primary {
     color: white;
     font-weight: 100;
     letter-spacing: 0.05em;
-    opacity: 0.96;
+    opacity: 0.98;
     font-size: 24px;
 }
 
@@ -201,7 +214,7 @@ a.pure-button-primary {
     color: white;
     font-weight: 200;
     letter-spacing: 0.08em;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /**
@@ -282,8 +295,8 @@ a.pure-button-primary {
     /* We decrease the width of the .splash, since we have more width
     to work with */
     .splash {
-        width: 50%;
-        height: 50%;
+        width: 70%;
+        height: 60%;
     }
 
     .splash-head {
@@ -299,6 +312,13 @@ a.pure-button-primary {
     /* We increase the header font size even more */
     .splash-head {
         font-size: 300%;
+    }
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 55%;
+        height: 50%;
     }
 
 }
@@ -381,6 +401,7 @@ a.pure-button-primary {
   top: 60px;
   left: 50px;
   font-size: 80px;
+  color: black;
 }
 
 .mirror {
@@ -396,6 +417,7 @@ a.pure-button-primary {
   top: 60px;
   right: 50px;
   font-size: 80px;
+  color: black;
 }
 
 .menu-sub-icon-mirror {
@@ -417,7 +439,7 @@ a.pure-button-primary {
 }
 
 .check-icon {
-  color: green;
+  color: rgba(60, 225, 60, 1);
   font-size: 50px;
 }
 
