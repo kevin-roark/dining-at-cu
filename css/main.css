@@ -14,6 +14,14 @@ body {
     font-size: 13px;
 }
 
+a {
+    color: rgba(60, 60, 240, 0.9);
+    text-decoration: none;
+}
+  a:hover, a:focus {
+      color: rgba(75, 75, 255, 1.0);
+}
+
 .l-box {
     padding: 1.5em;
 }
@@ -252,13 +260,6 @@ a.pure-button-primary {
   text-align: center;
   font-size: 100%;
 }
-  .footer a {
-    color: rgba(60, 60, 240, 0.9);
-    text-decoration: none;
-  }
-    .footer a:hover, .footer a:focus {
-      color: rgba(75, 75, 255, 1.0);
-    }
 
 /**
  * BIG STUFF STYLES
@@ -309,8 +310,9 @@ a.pure-button-primary {
  */
 
 .menu-box {
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 8em;
+  padding-right: 8em;
+  position: relative;
 }
 
 .menu-splash-container {
@@ -372,4 +374,54 @@ a.pure-button-primary {
 #dining-text {
   color: white;
   font-size: 3em;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  font-size: 80px;
+}
+
+.mirror {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.menu-icon-mirror {
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  font-size: 80px;
+}
+
+.menu-sub-icon-mirror {
+  z-index: 5;
+  right: 5px;
+  top: 30px;
+  font-size: 60px;
+}
+
+.menu-sub-icon {
+  z-index: 5;
+  left: 5px;
+  top: 30px;
+  font-size: 60px;
+}
+
+.ban-icon {
+  color: red;
+}
+
+.check-icon {
+  color: green;
+  font-size: 50px;
+}
+
+.menu-p {
+  font-size: 125%;
+  font-weight: 200;
 }

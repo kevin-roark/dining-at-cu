@@ -16,6 +16,21 @@ $(function() {
     var menuSplash = $('.menu-splash-container');
     var colorIndex = 0;
 
+    function getDateLink(date) {
+      var day = ''  + date.getDate();
+      if (day.length <= 1) {
+        day = '0' + day;
+      }
+      var month = '' + (date.getMonth() + 1);
+      if (month.length <= 1) {
+        month = '0' + month;
+      }
+      var year = ('' + date.getFullYear()).substring(2);
+
+      var formattedDate = month + '-' + day + '-' + year;
+      return '/menu/#' + formattedDate;
+    }
+
     /* start the loading animation */
     var loadingTimer = setInterval(function() {
         var periods = loading.html();
@@ -53,6 +68,8 @@ $(function() {
         });
     }, 3000);
 
-    $('#dining-text').html($('#dining-text').html() + ' ' + date);
+    $('#dining-text').html($('#dining-text').html() + ' ' + date.replace(/-/g, ' / '));
+
+    $('.tomorrow-link').attr('href', getDateLink(new Date(new Date(date).getTime() + 24 * 3600 * 1000)));
 
 });
