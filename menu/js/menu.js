@@ -53,4 +53,6 @@ $(function() {
         });
     }, 3000);
 
+    $('#dining-text').html($('#dining-text').html() + ' ' + date);
+
 });
