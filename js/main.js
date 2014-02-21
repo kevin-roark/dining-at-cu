@@ -26,7 +26,7 @@ $(function() {
       var year = ('' + date.getFullYear()).substring(2);
 
       var formattedDate = month + '-' + day + '-' + year;
-      return '/menu/#' + formattedDate;
+      return './menu/#' + formattedDate;
     }
 
     function isScrolledIntoView(elem) {
