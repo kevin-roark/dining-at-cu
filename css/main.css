@@ -447,3 +447,9 @@ a.pure-button-primary {
   font-size: 125%;
   font-weight: 200;
 }
+
+.menu-ad {
+  position: fixed;
+  z-index: 10;
+  opacity: 0.95;
+}

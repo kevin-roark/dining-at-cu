@@ -1,3 +1,36 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/* export something */
+module.exports = new Kutility;
+
+/* constructor does nothing at this point */
+function Kutility() {
+
+}
+
+/**
+ * get a random object from the array arr
+ *
+ * @api public
+ */
+ 
+Kutility.prototype.choice = function(arr) {
+    var i = Math.floor(Math.random() * arr.length);
+    return arr[i];
+}
+
+/**
+ * returns a random color as an 'rgb(x, y, z)' string
+ *
+ * @api public
+ */
+Kutility.prototype.randColor = function() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+
+},{}],2:[function(require,module,exports){
 $(function() {
     var CONTENT_LOAD_LENGTH = 3000;
     var AD_DELAY_LENGTH = 10000;
@@ -106,3 +139,5 @@ $(function() {
     $('.tomorrow-link').attr('href', getDateLink(new Date(new Date(date).getTime() + 24 * 3600 * 1000)));
 
 });
+
+},{"../../js/lib/kutility":1}]},{},[2])
