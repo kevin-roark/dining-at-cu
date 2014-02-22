@@ -20,7 +20,17 @@ $(function() {
 
     var adPrefix = '../images/ads/';
     var ads = [
-        adPrefix + '1.jpg'
+        adPrefix + '1.jpg',
+        adPrefix + '2.jpg',
+        adPrefix + '3.jpg',
+        adPrefix + '4.jpg',
+        adPrefix + '5.jpg',
+        adPrefix + '6.jpg',
+        adPrefix + '7.jpg',
+        adPrefix + '8.jpg',
+        adPrefix + '9.jpg',
+        adPrefix + '10.jpg',
+        adPrefix + '11.jpg',
     ];
 
     var loading = $('.loading');
