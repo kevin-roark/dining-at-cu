@@ -64,6 +64,11 @@ $(function() {
         adPrefix + '9.jpg',
         adPrefix + '10.jpg',
         adPrefix + '11.jpg',
+        adPrefix + '12.jpg',
+        adPrefix + '13.jpg',
+        adPrefix + '14.jpg',
+        adPrefix + '15.jpg',
+        adPrefix + '16.jpg'
     ];
 
     var loading = $('.loading');
@@ -147,6 +152,9 @@ $(function() {
     $('#dining-text').html($('#dining-text').html() + ' ' + date.replace(/-/g, ' / '));
 
     $('.tomorrow-link').attr('href', getDateLink(new Date(new Date(date).getTime() + 24 * 3600 * 1000)));
+    $('.tomorrow-link').click(function() {
+      location.reload();
+    });
 
 });
 

@@ -119,5 +119,8 @@ $(function() {
     $('#dining-text').html($('#dining-text').html() + ' ' + date.replace(/-/g, ' / '));
 
     $('.tomorrow-link').attr('href', getDateLink(new Date(new Date(date).getTime() + 24 * 3600 * 1000)));
+    $('.tomorrow-link').click(function() {
+      location.reload();
+    });
 
 });
