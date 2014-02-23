@@ -33,8 +33,8 @@ Kutility.prototype.randColor = function() {
 },{}],2:[function(require,module,exports){
 $(function() {
     var CONTENT_LOAD_LENGTH = 3000;
-    var AD_DELAY_LENGTH = 10000;
-    var BETWEEN_AD_LENGTH = 1500;
+    var AD_DELAY_LENGTH = 12000;
+    var BETWEEN_AD_LENGTH = 2000;
 
     var kutility = require('../../js/lib/kutility');
 
@@ -134,7 +134,7 @@ $(function() {
             var el = $('<div>');
             el.addClass('menu-ad');
 
-            var x = Math.floor(Math.random() * ($(window).width() - 225)) + 25;
+            var x = Math.floor(Math.random() * ($(window).width() - 225)) + 0;
             var y = Math.floor(Math.random() * ($(window).height() - 150)) + 25;
             el.css('left', x);
             el.css('top', y);
@@ -152,8 +152,8 @@ $(function() {
     $('#dining-text').html($('#dining-text').html() + ' ' + date.replace(/-/g, ' / '));
 
     $('.tomorrow-link').attr('href', getDateLink(new Date(new Date(date).getTime() + 24 * 3600 * 1000)));
-    $('.tomorrow-link').click(function() {
-      location.reload();
+    $('.tomorrow-link').click(function(ev) {
+      location.assign($(ev.target).attr('href'));
     });
 
 });
