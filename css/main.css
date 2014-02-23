@@ -108,6 +108,7 @@ a.pure-button-primary {
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 2px 1px rgba(0,0,0, 0.6);
+    max-height: 40px;
 }
     .home-menu.pure-menu-open {
         background: rgba(25, 25, 25, 1.0);

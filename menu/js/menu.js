@@ -121,6 +121,7 @@ $(function() {
     $('.tomorrow-link').attr('href', getDateLink(new Date(new Date(date).getTime() + 24 * 3600 * 1000)));
     $('.tomorrow-link').click(function(ev) {
       location.assign($(ev.target).attr('href'));
+      location.reload();
     });
 
 });
