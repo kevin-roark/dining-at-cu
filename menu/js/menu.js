@@ -31,6 +31,11 @@ $(function() {
         adPrefix + '9.jpg',
         adPrefix + '10.jpg',
         adPrefix + '11.jpg',
+        adPrefix + '12.jpg',
+        adPrefix + '13.jpg',
+        adPrefix + '14.jpg',
+        adPrefix + '15.jpg',
+        adPrefix + '16.jpg'
     ];
 
     var loading = $('.loading');
