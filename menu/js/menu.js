@@ -1,7 +1,9 @@
 $(function() {
     var CONTENT_LOAD_LENGTH = 3000;
     var AD_DELAY_LENGTH = 12000;
-    var BETWEEN_AD_LENGTH = 2000;
+    var BETWEEN_AD_LENGTH = 4000;
+    var BETWEEN_AD_LENGTH_MIN = 500;
+    var BETWEEN_AD_DECREMENT = 250;
 
     var kutility = require('../../js/lib/kutility');
 
@@ -34,7 +36,11 @@ $(function() {
         adPrefix + '13.jpg',
         adPrefix + '14.jpg',
         adPrefix + '15.jpg',
-        adPrefix + '16.jpg'
+        adPrefix + '16.jpg',
+        adPrefix + '17.jpg',
+        adPrefix + '18.jpg',
+        adPrefix + '19.jpg',
+        adPrefix + '20.jpg'
     ];
 
     var loading = $('.loading');
@@ -109,8 +115,11 @@ $(function() {
             el.html(im);
 
             $('body').append(el);
+
+            BETWEEN_AD_LENGTH = Math.max(BETWEEN_AD_LENGTH - BETWEEN_AD_DECREMENT, BETWEEN_AD_LENGTH_MIN);
+
+            setTimeout(putAd, BETWEEN_AD_LENGTH);
         }
-        setInterval(putAd, BETWEEN_AD_LENGTH);
         putAd();
 
     }, AD_DELAY_LENGTH)
