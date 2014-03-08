@@ -454,3 +454,21 @@ a.pure-button-primary {
   z-index: 10;
   opacity: 0.85;
 }
+
+/**
+ * MENU BIG STUFF STYLES
+ */
+
+@media (min-width: 48em) {
+  .menu-box {
+    width: 60%;
+    margin-left: 18%;
+  }
+}
+
+/*
+ * MENU EVEN BIGGER STYLES
+ */
+@media (min-width: 78em) {
+
+}
