@@ -43,12 +43,11 @@ $(function() {
     document.title = title;
 
     var loadingColors = [
-        'rgba(30, 225, 30, 1)',
-        'rgba(30, 30, 225, 1)',
-        'rgba(225, 225, 30, 1)',
-        'rgba(225, 30, 225, 1)',
-        'rgba(0, 200, 200, 1)',
-        'rgba(225, 30, 30, 1)'
+        'rgba(5, 133, 41, 1)',
+        'rgba(5, 52, 133, 1)',
+        'rgba(241, 183, 9, 1)',
+        'rgba(187, 7, 121, 1)',
+        'rgba(5, 134, 143, 1)'
     ];
 
     var adPrefix = '../images/ads/';

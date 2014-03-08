@@ -318,7 +318,7 @@ a.pure-button-primary {
     /* We decrease the width of the .splash, since we have more width
     to work with */
     .splash {
-        width: 55%;
+        width: 60%;
         height: 50%;
     }
 
@@ -331,13 +331,13 @@ a.pure-button-primary {
  */
 
 .menu-box {
-  padding-left: 8em;
-  padding-right: 8em;
+  padding-left: 30px;
+  padding-right: 30px;
   position: relative;
 }
 
 .menu-splash-container {
-  background-color: rgba(225, 30, 30, 1);
+  background-color: rgba(177, 6, 43, 1);
     /* The following styles are required for the "scroll-over" effect */
   height: 100%; /* should be ~ 35 - 40% after load */
 }
@@ -389,6 +389,7 @@ a.pure-button-primary {
 .menu-subhead {
   text-align: center;
   font-size: 2.5em;
+  line-height: 1em;
   font-weight: 300;
 }
 
@@ -440,8 +441,7 @@ a.pure-button-primary {
 }
 
 .check-icon {
-  color: rgba(60, 225, 60, 1);
-  font-size: 50px;
+  color: rgba(16, 193, 25, 1);
 }
 
 .menu-p {
